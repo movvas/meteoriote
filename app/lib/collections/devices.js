@@ -13,17 +13,17 @@ Schemas.Device = new SimpleSchema({
     label: "Description",
     max: 200
   },
-  deviceId: {
+  unitId: {
     type: String,
     label: "Device ID",
+  },
+  unitToken: {
+    type: String,
+    label: "Access Token"
   },
   userId: {
     type: String,
     label: "Title"
-  },
-  accessToken: {
-    type: String,
-    label: "Access Token"
   }
 });
 

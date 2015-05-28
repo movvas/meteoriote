@@ -1,0 +1,17 @@
+<template name="deviceActive">
+  <div class="container">
+    <h4>Active Device: {{deviceName}} </h4>
+    <span class=""> <a class="btn btn-primary btn-sm btn-danger" href="{{pathFor 'dashboard.edit'}}">Edit Device info</a></span>
+    <hr>
+    <div>
+      <p class ="device-listing">
+        Unit Id: {{unitId}}
+      </p>
+      <p>
+        Access Token: {{token}}
+      </p>
+      <p>{{unit}}</p>
+    </div>
+
+  </div>
+</template>

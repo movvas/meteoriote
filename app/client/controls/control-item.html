@@ -1,35 +1,30 @@
-<!-- <template name="deviceItem">
+<template name="led">
+test
+<button>one</button>
+<button>two</button>
+  <div class=" control-box">
 
-<div class="list-group">
-  {{#if activeDevice}}
-    <a href="#" class="list-group-item">
-      <span class="device-items">
-        <a href="{{pathFor 'dashboard'}}"> {{activeDevice.deviceName}} </a>
-      </span>
-     <span class="label label-warning">
-      <a href="{{pathFor 'device.edit'}}">
-        Edit
-      </a>
-      </span>
-    </a>
-  {{/if}}
-</div>
+    <div class ="device-form">
 
+
+      <div class="light-switch">
+        <p>The Spark LED is
+          {{#if pinState}}
+            on -
+          {{else}}
+            off -
+          {{/if}}
+          <span>
+            {{#if pinState}}
+            <button id="lightButton">Turn OFF</button>
+            {{else}}
+            <button id="lightButton">Turn ON</button>
+            {{/if}}
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
 
 </template>
- -->
-
-
-<!--
-           <a href="{{pathFor 'dashboard.edit'}}">
-              <span class="device-edit glyphicon glyphicon-edit" aria-hidden="true"></span>
-            </a>
-
-        {{#each devices}}
-        <li class="device-items"><a href="{{pathFor 'dashboard'}}">{{deviceName}}</a> - <span class="label label-warning"><a href="{{pathFor 'dashboard.edit'}}">Edit</a></span></li>
-        {{/each}}
-      </ul> -->
-
-
-
 
