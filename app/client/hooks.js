@@ -11,5 +11,5 @@ var deviceHoooks = {
 }
 
 
-// AutoForm.addHooks('insertDeviceForm', deviceHooks);
+AutoForm.addHooks('insertDeviceForm', deviceHooks);
 AutoForm.addHooks('updateDeviceForm', deviceHoooks);
