@@ -6,7 +6,7 @@ Template.deviceActive.onCreated(function() {
   Session.set('unitId', unitId);
 
   var token = this.accessToken;
-  Session.set('unitToken', token);
+  Session.set('unitToken', unitToken);
 });
 
 Template.deviceActive.helpers({
@@ -16,10 +16,13 @@ Template.deviceActive.helpers({
     return unitId;
   },
   unitToken: function() {
-    return Session.get('unitToken');
-  },
-  unit: function() {
-    var currentDeviceId = Session.get('unitId');
-    return Devices.findOne({_id: currentDeviceId});
+    var unitToken = this.deviceId;
+    Session.set('unitToken', unitToken);
+    return unitToken;
   }
+  // },
+  // unit: function() {
+  //   var currentDeviceId = Session.get('unitId');
+  //   return Devices.findOne({_id: currentDeviceId});
+  // }
 });

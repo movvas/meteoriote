@@ -7,8 +7,8 @@ Template.dashboardEdit.events({
     var deviceProperties = {
       deviceName: $(e.target).find('[name=deviceName]').val(),
       deviceDescription: $(e.target).find('[name=deviceDescription]').val(),
-      deviceId: $(e.target).find('[name=deviceId]').val(),
-      accessToken: $(e.target).find('[name=accessToken]').val()
+      unitId: $(e.target).find('[name=unitId]').val(),
+      unitToken: $(e.target).find('[name=unitToken]').val()
     }
 
     Devices.update(currentDeviceId, {$set: deviceProperties}, function() {
