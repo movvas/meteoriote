@@ -41,12 +41,25 @@ Router.route('/dashboard/:_id', function() {
 });
 
 
-
-Router.route('/dashboard/:_id/edit', function() {
-  var item = Devices.findOne({_id: this.params._id});
-  this.render('dashboardEdit', {data: item});
+Router.route('/devices', function() {
+  this.render('deviceList');
 }, {
-  name: 'dashboard.edit'
+  name: 'device.list'
+});
+
+Router.route('/device/:_id', function() {
+  var item = Devices.findOne({_id: this.params._id});
+  this.render('dashboardDevice', {data: item});
+}, {
+  name: 'device.device'
+});
+
+
+Router.route('/device/:_id/edit', function() {
+  var item = Devices.findOne({_id: this.params._id});
+  this.render('deviceEdit', {data: item});
+}, {
+  name: 'device.edit'
 });
 
 // Router.route('/dashboard/:_id', function() {

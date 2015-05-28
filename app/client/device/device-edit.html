@@ -1,4 +1,4 @@
-<template name="dashboardEdit">
+<template name="deviceEdit">
   <div class="panel panel-primary">
     <div class="panel-heading">
       <h3 class="panel-title">Edit Device</h3>
@@ -12,11 +12,11 @@
           {{> afQuickField name='unitId'}}
           {{> afQuickField name='unitToken'}}
         </fieldset>
-        <a class="device-link" href="{{pathFor 'dashboard.device'}}"><button type="submit" class="btn btn-primary">update {{deviceName}}</button></a>
+        <a class="device-link" href="{{pathFor 'dashboard'}}"><button type="submit" class="btn btn-primary">update {{deviceName}}</button></a>
         {{/autoForm}}
       </div>
     </div>
-    <a class="btn" href="{{pathFor route='dashboard.device'}}">Back</a>
+    <a class="btn" href="{{pathFor route='device.list'}}">Back</a>
   </div>
 
   <!-- {{> quickForm collection="Devices" doc=this id="updateDeviceForm" type="update"}} -->

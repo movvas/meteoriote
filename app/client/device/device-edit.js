@@ -1,5 +1,5 @@
 
-Template.dashboardEdit.events({
+Template.deviceEdit.events({
   'submit form': function(e) {
     e.preventDefault();
 
@@ -12,7 +12,7 @@ Template.dashboardEdit.events({
     }
 
     Devices.update(currentDeviceId, {$set: deviceProperties}, function() {
-      Router.go('dashboard');
+      Router.go('/about');
     });
   }
 });
